@@ -18,7 +18,7 @@ import AsyncAboutRoute from './AsyncAboutRoute';
 
 function DemoApp() {
   return (
-    <div style={{ padding: '2rem' }}>
+    <div>
       <Helmet>
         <html lang="en" />
         <title>{config('htmlPage.defaultTitle')}</title>

@@ -19,3 +19,17 @@ ul {
 }
 
 ul li { display: inline; margin: 0 .5rem; }
+
+body {
+  background-color: #f9f9f9;
+}
+
+.site-name {
+  font-size: 31px;
+  padding: 0 0.5em;
+}
+
+.mainheader {
+  background-color: #fff;
+  height: 50px;
+}
