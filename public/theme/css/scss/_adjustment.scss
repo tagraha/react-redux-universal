@@ -1,0 +1,57 @@
+.carddropdown {
+  background: #232323;
+  z-index: 1;
+  color: #808080;
+  border-radius: 0;
+  margin-top: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.28);
+}
+
+.shadowed {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+  border: none !important;
+}
+
+.statusinputbg {
+  background: #e6e6e6;
+  padding: 10px 20px 20px 57px;
+}
+
+.editor-wrapper {
+  width: 700px !important;
+  margin: 0 auto !important;
+}
+
+.label-hint {
+  margin-bottom: 8px;
+  display: inline-block;
+  background: #505050;
+  color: #fff;
+  /* width: 100%; */
+  position: relative;
+  padding: 3px 10px 3px 5px;
+  border-radius: 3px;
+
+  code {
+    background: rgb(60, 139, 152);
+    color: #fff;
+  }
+}
+
+.DraftEditor-root {
+  background: #fff;
+  margin-bottom: 25px;
+  padding: 9px;
+}
+
+.divtersembunyi {
+  position: absolute;
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
+.htmlobject {
+  > span > div {
+    max-width: none !important;
+  }
+}
