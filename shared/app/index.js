@@ -5,7 +5,7 @@ import Switch from 'react-router-dom/Switch';
 import Route from 'react-router-dom/Route';
 import Helmet from 'react-helmet';
 
-import config from '../../../config';
+import config from './../../config';
 
 import './globals.css';
 
