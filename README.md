@@ -1,5 +1,3 @@
-### Feature Branch
-
 Note: This is a personal playground
 
 ---
