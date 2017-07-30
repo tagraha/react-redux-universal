@@ -33,3 +33,10 @@ body {
   background-color: #fff;
   height: 50px;
 }
+
+.animated-page-wrapper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
