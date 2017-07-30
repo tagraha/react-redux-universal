@@ -1,38 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> renders 1`] = `
-<ul
-  style={
-    Object {
-      "backgroundColor": "#c6c6c6",
-      "marginTop": "1rem",
-      "padding": "1rem",
-    }
-  }
+<div
+  className="clearfix mainheader"
 >
-  <li>
-    <Link
-      replace={false}
-      to="/"
+  <div
+    className="float-left"
+  >
+    <div
+      className="site-name"
     >
-      Home
-    </Link>
-  </li>
-  <li>
-    <Link
-      replace={false}
-      to="/posts"
+      REact-betot
+    </div>
+  </div>
+  <div
+    className="float-right"
+  >
+    <ul
+      style={
+        Object {
+          "padding": "13px 1rem",
+        }
+      }
     >
-      Posts
-    </Link>
-  </li>
-  <li>
-    <Link
-      replace={false}
-      to="/about"
-    >
-      About
-    </Link>
-  </li>
-</ul>
+      <li>
+        <Link
+          replace={false}
+          to="/"
+        >
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link
+          replace={false}
+          to="/posts"
+        >
+          Posts
+        </Link>
+      </li>
+      <li>
+        <Link
+          replace={false}
+          to="/about"
+        >
+          About
+        </Link>
+      </li>
+    </ul>
+  </div>
+</div>
 `;
