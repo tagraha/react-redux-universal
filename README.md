@@ -1,4 +1,4 @@
-Note: This is a personal playground
+Note: This is a personal playground cloned from [react-universally](https://github.com/ctrlplusb/react-universally)
 
 ---
 
