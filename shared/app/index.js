@@ -18,11 +18,6 @@ import AsyncAboutRoute from './AsyncAboutRoute';
 
 import AnimatedSwitch from './AnimatedSwitch';
 
-const firstChild = (props) => {
-  const childrenArray = React.Children.toArray(props.children);
-  return childrenArray[0] || null;
-};
-
 class DemoApp extends Component {
   render() {
     return (
