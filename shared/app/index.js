@@ -117,7 +117,7 @@ class DemoApp extends Component {
         <Header />
         <div style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
 
-          <Route
+          {/* <Route
             render={({ location }) => (
               <TransitionGroup component="main">
                 <AnimatedSwitch key={location.key} location={location}>
@@ -128,7 +128,14 @@ class DemoApp extends Component {
                 </AnimatedSwitch>
               </TransitionGroup>
             )}
-          />
+          /> */}
+
+          <Switch>
+            <Route exact path="/" component={AsyncHomeRoute} />
+            <Route path="/posts" component={AsyncPostsRoute} />
+            <Route path="/about" component={AsyncAboutRoute} />
+            <Route component={Error404} />
+          </Switch>
 
         </div>
       </div>
