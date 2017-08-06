@@ -13,6 +13,9 @@ const AsyncPostsRoute = () => (
 
     <hr />
 
+    {/* Note: use this line below if you dont want animated transition */}
+    {/* <Route path="/posts/:id" component={Post} />  */}
+
     <Route
       render={({ location }) => (
         <TransitionGroup component="main">
