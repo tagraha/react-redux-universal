@@ -18,7 +18,7 @@ import AsyncAboutRoute from './AsyncAboutRoute';
 
 import AnimatedSwitch from './AnimatedSwitch';
 
-class DemoApp extends Component {
+class AppContainer extends Component {
   render() {
     return (
       <div>
@@ -114,8 +114,11 @@ class DemoApp extends Component {
             href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css"
           /> */}
         </Helmet>
+
+        <div className="overlay out" id="overlay" />
+
         <Header />
-        <div style={{ paddingTop: '2rem', paddingBottom: '2rem' }} className="container">
+        <div className="bt-wrapper">
 
           {/* <Route
             render={({ location }) => (
@@ -143,4 +146,4 @@ class DemoApp extends Component {
   }
 }
 
-export default DemoApp;
+export default AppContainer;

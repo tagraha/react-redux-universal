@@ -3,11 +3,7 @@ import React from 'react';
 import Menu from './Menu';
 
 function Header() {
-  return (
-    <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-      <Menu />
-    </div>
-  );
+  return <Menu />;
 }
 
 export default Header;

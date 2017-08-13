@@ -1,49 +1,6 @@
 @import "./../../public/theme/css/app.css";
-html {
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* override style */
+.bt-wrapper {
+  min-height: 1120px;
 }
-
-/* Inline our ul for our menu */
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-ul li { display: inline; margin: 0 .5rem; }
-
-body {
-  background-color: #f9f9f9;
-}
-
-.site-name {
-  font-size: 31px;
-  padding: 0 0.5em;
-}
-
-.mainheader {
-  background-color: #fff;
-  height: 50px;
-}
-
-.animated-page-wrapper {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* override */
-.container {
-  max-width: 125.0rem;
-}
-/* override end */

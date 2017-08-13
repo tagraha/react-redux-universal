@@ -13,7 +13,7 @@ function AboutRoute() {
       <p>
         View our contributors list on our
         {' '}
-        <a href="https://github.com/ctrlplusb/react-universally">GitHub</a>
+        <a href="https://github.com/tagraha/react-redux-universal">GitHub</a>
         {' '}
         page.
       </p>
