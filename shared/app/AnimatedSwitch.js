@@ -11,17 +11,14 @@ export default class AnimatedSwitch extends Switch {
     };
   }
   componentWillAppear(cb) {
-    console.log('componentWillAppear');
     setTimeout(() => Animated.spring(this.state.animate, { toValue: 1 }).start(), 250);
     cb();
   }
   componentWillEnter(cb) {
-    console.log('componentWillEnter');
     setTimeout(() => Animated.spring(this.state.animate, { toValue: 1 }).start(), 250);
     cb();
   }
   componentWillLeave(cb) {
-    console.log('componentWillLeave');
     Animated.spring(this.state.animate, { toValue: 0 }).start();
     setTimeout(() => cb(), 175);
   }
@@ -31,7 +28,7 @@ export default class AnimatedSwitch extends Switch {
       transform: Animated.template`
 				translate3d(0,${this.state.animate.interpolate({
   inputRange: [0, 1],
-  outputRange: ['12px', '0px'],
+  outputRange: ['120px', '0px'],
 })},0)
 			`,
     };
