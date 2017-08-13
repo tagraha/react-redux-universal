@@ -18,7 +18,7 @@ const AsyncPostsRoute = () => (
 
     <Route
       render={({ location }) => (
-        <TransitionGroup component="main">
+        <TransitionGroup component="article">
           <AnimatedSwitch key={location.key} location={location}>
             <Route path="/posts/:id" component={Post} />
           </AnimatedSwitch>
