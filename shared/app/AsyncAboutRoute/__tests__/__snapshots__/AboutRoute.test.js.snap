@@ -22,7 +22,7 @@ exports[`<AboutRoute /> renders 1`] = `
     View our contributors list on our
      
     <a
-      href="https://github.com/ctrlplusb/react-universally"
+      href="https://github.com/tagraha/react-redux-universal"
     >
       GitHub
     </a>

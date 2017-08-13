@@ -1,53 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> renders 1`] = `
-<div
-  className="clearfix mainheader"
+<nav
+  className="nav has-shadow is-fixed"
 >
   <div
-    className="float-left"
+    className="container"
   >
     <div
-      className="site-name"
+      className="nav-left"
     >
-      REact-betot
+      <a
+        className="nav-item"
+        id="sidebaropener"
+      >
+        <img
+          alt="logo"
+          src="http://bulma.io/images/bulma-logo.png"
+        />
+      </a>
+      <a
+        className="nav-item is-tab is-hidden-mobile is-active"
+      >
+        Home
+      </a>
+      <a
+        className="nav-item is-tab is-hidden-mobile"
+      >
+        About
+      </a>
+    </div>
+    <span
+      className="nav-toggle"
+    >
+      <span />
+      <span />
+      <span />
+    </span>
+    <div
+      className="nav-right nav-menu"
+    >
+      <Link
+        className="nav-item is-tab"
+        replace={false}
+        to="/"
+      >
+        Home
+      </Link>
+      <Link
+        className="nav-item is-tab"
+        replace={false}
+        to="/posts"
+      >
+        Posts
+      </Link>
+      <Link
+        className="nav-item is-tab"
+        replace={false}
+        to="/about"
+      >
+        About
+      </Link>
+      <a
+        className="nav-item is-tab is-hidden-tablet"
+      >
+        About
+      </a>
+      <a
+        className="nav-item is-tab"
+      >
+        <figure
+          className="image is-16x16"
+          style={
+            Object {
+              "marginRight": "8px",
+            }
+          }
+        >
+          <img
+            src="http://bulma.io/images/jgthms.png"
+          />
+        </figure>
+        Profile
+      </a>
+      <a
+        className="nav-item is-tab"
+      >
+        Log out
+      </a>
     </div>
   </div>
-  <div
-    className="float-right"
-  >
-    <ul
-      style={
-        Object {
-          "padding": "13px 1rem",
-        }
-      }
-    >
-      <li>
-        <Link
-          replace={false}
-          to="/"
-        >
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link
-          replace={false}
-          to="/posts"
-        >
-          Posts
-        </Link>
-      </li>
-      <li>
-        <Link
-          replace={false}
-          to="/about"
-        >
-          About
-        </Link>
-      </li>
-    </ul>
-  </div>
-</div>
+</nav>
 `;
