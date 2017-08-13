@@ -1,0 +1,17 @@
+.sidebar {
+  background: #efefef;
+  height: 100%;
+  position: fixed;
+  width: 300px;
+  z-index: 3;
+
+  &.collapsed {
+    left: -300px;
+  }
+
+  &.opened {
+    left: 0;
+  }
+
+  .menu { padding: 12px; }
+}
