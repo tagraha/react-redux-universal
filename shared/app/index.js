@@ -1,6 +1,7 @@
 import 'normalize.css/normalize.css';
 
 import React, { Component } from 'react';
+import { asyncComponent } from 'react-async-component';
 import Switch from 'react-router-dom/Switch';
 import Route from 'react-router-dom/Route';
 import Helmet from 'react-helmet';
@@ -10,9 +11,9 @@ import './globals.css';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 import Error404 from './Error404';
-import Header from './Header';
+// import Header from './Header';
 
-import AppContainer from './AppContainer';
+// import AppContainer from './AppContainer';
 import AsyncHomeRoute from './AsyncHomeRoute';
 import AsyncPostsRoute from './AsyncPostsRoute';
 import AsyncAboutRoute from './AsyncAboutRoute';
@@ -20,8 +21,8 @@ import AsyncAboutRoute from './AsyncAboutRoute';
 import AnimatedSwitch from './AnimatedSwitch';
 
 /* components */
-import Sidebar from './../components/Sidebar';
-import Overlay from './../components/Overlay';
+// import Sidebar from './../components/Sidebar';
+// import Overlay from './../components/Overlay';
 
 class AppRoot extends Component {
   render() {
@@ -130,9 +131,9 @@ class AppRoot extends Component {
         /> */}
 
         <Switch>
-          <Route path="/" component={AppContainer} />
-          {/* <Route path="/posts" component={AsyncPostsRoute} />
-          <Route path="/about" component={AsyncAboutRoute} /> */}
+          <Route exact path="/" component={AsyncHomeRoute} />
+          <Route path="/posts" component={AsyncPostsRoute} />
+          <Route path="/about" component={AsyncAboutRoute} />
           <Route component={Error404} />
         </Switch>
       </div>

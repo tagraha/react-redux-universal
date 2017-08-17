@@ -27,11 +27,18 @@ class HomeRoute extends Component {
 
     return (
       <div>
+
         <Helmet>
           <title>Home</title>
         </Helmet>
 
-        <div className="columns">
+        {theme.sidebarIsOpen && <Overlay reveal={theme.sidebarIsOpen} closeFn={closeSidebar} />}
+
+        <Header sidebarTrigger={this.props.openSidebar} />
+
+        {theme.sidebarIsOpen && <Sidebar />}
+
+        <div className="columns bt-content">
 
           <div className="column is-one-quarter">
             <h2>{config('welcomeMessage')}</h2>
@@ -102,4 +109,3 @@ export default compose(connect(mapStateToProps, mapActionsToProps))(HomeRoute);
 // Post.defaultProps = {
 //   post: {},
 // };
-// export default HomeRoute;

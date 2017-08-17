@@ -20,7 +20,7 @@ class Menu extends Component {
             <span />
           </span>
           <div className="nav-right nav-menu">
-            <NavLink className="nav-item is-tab" to="/home" activeClassName="is-active">
+            <NavLink className="nav-item is-tab" to="/" activeClassName="is-active">
               Home
             </NavLink>
             <NavLink className="nav-item is-tab" to="/posts" activeClassName="is-active">
