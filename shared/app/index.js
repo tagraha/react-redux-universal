@@ -17,13 +17,6 @@ import AsyncPostsRoute from './AsyncPostsRoute';
 import AsyncAboutRoute from './AsyncAboutRoute';
 
 import AnimatedSwitch from './AnimatedSwitch';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-import { withJob } from 'react-jobs';
-
-/* redux */
-import * as ThemeAction from './../actions/appState';
-import * as FromState from './../reducers';
 
 /* components */
 import Sidebar from './../components/Sidebar';
@@ -31,7 +24,6 @@ import Overlay from './../components/Overlay';
 
 class AppContainer extends Component {
   render() {
-    const { theme } = this.props.allAppState;
     return (
       <div>
         <Helmet>
@@ -127,50 +119,48 @@ class AppContainer extends Component {
           /> */}
         </Helmet>
 
-        {theme.sidebarIsOpen &&
-          <Overlay reveal={theme.sidebarIsOpen} closeFn={this.props.closeSidebar} />}
-
         <Header />
 
-        {theme.sidebarIsOpen && <Sidebar />}
+        {/* <Route
+          render={({ location }) => (
+            <TransitionGroup component="main">
+              <AnimatedSwitch key={location.key} location={location}>
+                <Route exact path="/" component={AsyncHomeRoute} />
+                <Route path="/posts" component={AsyncPostsRoute} />
+                <Route path="/about" component={AsyncAboutRoute} />
+                <Route component={Error404} />
+              </AnimatedSwitch>
+            </TransitionGroup>
+          )}
+        /> */}
 
-        <div className="bt-wrapper">
-
-          {/* <Route
-            render={({ location }) => (
-              <TransitionGroup component="main">
-                <AnimatedSwitch key={location.key} location={location}>
-                  <Route exact path="/" component={AsyncHomeRoute} />
-                  <Route path="/posts" component={AsyncPostsRoute} />
-                  <Route path="/about" component={AsyncAboutRoute} />
-                  <Route component={Error404} />
-                </AnimatedSwitch>
-              </TransitionGroup>
-            )}
-          /> */}
-
-          <Switch>
-            <Route exact path="/" component={AsyncHomeRoute} />
-            <Route path="/posts" component={AsyncPostsRoute} />
-            <Route path="/about" component={AsyncAboutRoute} />
-            <Route component={Error404} />
-          </Switch>
-
-        </div>
+        <Switch>
+          <Route exact path="/" component={AsyncHomeRoute} />
+          <Route path="/posts" component={AsyncPostsRoute} />
+          <Route path="/about" component={AsyncAboutRoute} />
+          <Route component={Error404} />
+        </Switch>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    allAppState: FromState.getAllAppState(state),
-  };
-}
+// function mapStateToProps(state, { match }) {
+//   return {
+//     allAppState: FromState.getAllAppState(state, match),
+//   };
+// }
 
-const mapActionsToProps = {
-  openSidebar: ThemeAction.openSidebar,
-  closeSidebar: ThemeAction.closeSidebar,
-};
+// const mapActionsToProps = {
+//   openSidebar: ThemeAction.openSidebar,
+//   closeSidebar: ThemeAction.closeSidebar,
+// };
 
-export default compose(connect(mapStateToProps, mapActionsToProps))(AppContainer);
+// export default compose(
+//   connect(mapStateToProps, mapActionsToProps),
+//   withJob({
+//     work: ({ match, allAppState, openSidebar, closeSidebar }) => { return true },
+//     shouldWorkAgain: (prevProps, nextProps) => false,
+//   })
+// )(AppContainer);
+export default AppContainer;
