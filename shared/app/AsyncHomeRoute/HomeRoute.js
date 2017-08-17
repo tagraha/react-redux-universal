@@ -32,7 +32,8 @@ class HomeRoute extends Component {
         </Helmet>
 
         <div className="columns">
-
+          <p>Hello</p>
+          <h2>Welcome to the jungle</h2>
           <div className="column is-one-quarter">
             <h2>{config('welcomeMessage')}</h2>
 
