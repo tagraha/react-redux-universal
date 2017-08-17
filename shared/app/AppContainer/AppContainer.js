@@ -42,7 +42,7 @@ class AppContainer extends Component {
         {theme.sidebarIsOpen && <Sidebar />}
 
         <div className="bt-wrapper">
-          <Route path={'/home'} component={AsyncHomeRoute} />
+          <Route path={'/'} component={AsyncHomeRoute} />
           <Route path={'/posts'} component={AsyncPostsRoute} />
           <Route path={'/about'} component={AsyncAboutRoute} />
         </div>
