@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 
 function AboutRoute() {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="bt-wrapper" style={{ textAlign: 'center' }}>
       <Helmet>
         <title>About</title>
       </Helmet>
