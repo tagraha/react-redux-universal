@@ -40,27 +40,27 @@ exports[`<Home /> renders 1`] = `
     <div
       className="nav-right nav-menu"
     >
-      <Link
+      <NavLink
+        activeClassName="is-active"
         className="nav-item is-tab"
-        replace={false}
-        to="/"
+        to="/home"
       >
         Home
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
+        activeClassName="is-active"
         className="nav-item is-tab"
-        replace={false}
         to="/posts"
       >
         Posts
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
+        activeClassName="active"
         className="nav-item is-tab"
-        replace={false}
         to="/about"
       >
         About
-      </Link>
+      </NavLink>
       <a
         className="nav-item is-tab is-hidden-tablet"
       >

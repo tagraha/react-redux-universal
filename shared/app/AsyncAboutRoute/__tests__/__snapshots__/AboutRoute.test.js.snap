@@ -2,6 +2,7 @@
 
 exports[`<AboutRoute /> renders 1`] = `
 <div
+  className="bt-wrapper"
   style={
     Object {
       "textAlign": "center",

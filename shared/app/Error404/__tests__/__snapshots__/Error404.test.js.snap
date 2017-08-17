@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Error404 /> renders 1`] = `
-<div>
+<div
+  className="bt-wrapper"
+>
   Sorry, that page was not found.
 </div>
 `;
