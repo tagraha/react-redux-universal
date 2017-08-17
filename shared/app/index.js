@@ -12,6 +12,7 @@ import TransitionGroup from 'react-transition-group/TransitionGroup';
 import Error404 from './Error404';
 import Header from './Header';
 
+import AppContainer from './AppContainer';
 import AsyncHomeRoute from './AsyncHomeRoute';
 import AsyncPostsRoute from './AsyncPostsRoute';
 import AsyncAboutRoute from './AsyncAboutRoute';
@@ -22,7 +23,7 @@ import AnimatedSwitch from './AnimatedSwitch';
 import Sidebar from './../components/Sidebar';
 import Overlay from './../components/Overlay';
 
-class AppContainer extends Component {
+class AppRoot extends Component {
   render() {
     return (
       <div>
@@ -113,13 +114,7 @@ class AppContainer extends Component {
             rel="stylesheet"
             href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
           />
-          {/* <link
-            rel="stylesheet"
-            href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css"
-          /> */}
         </Helmet>
-
-        <Header />
 
         {/* <Route
           render={({ location }) => (
@@ -135,9 +130,9 @@ class AppContainer extends Component {
         /> */}
 
         <Switch>
-          <Route exact path="/" component={AsyncHomeRoute} />
-          <Route path="/posts" component={AsyncPostsRoute} />
-          <Route path="/about" component={AsyncAboutRoute} />
+          <Route path="/" component={AppContainer} />
+          {/* <Route path="/posts" component={AsyncPostsRoute} />
+          <Route path="/about" component={AsyncAboutRoute} /> */}
           <Route component={Error404} />
         </Switch>
       </div>
@@ -145,22 +140,4 @@ class AppContainer extends Component {
   }
 }
 
-// function mapStateToProps(state, { match }) {
-//   return {
-//     allAppState: FromState.getAllAppState(state, match),
-//   };
-// }
-
-// const mapActionsToProps = {
-//   openSidebar: ThemeAction.openSidebar,
-//   closeSidebar: ThemeAction.closeSidebar,
-// };
-
-// export default compose(
-//   connect(mapStateToProps, mapActionsToProps),
-//   withJob({
-//     work: ({ match, allAppState, openSidebar, closeSidebar }) => { return true },
-//     shouldWorkAgain: (prevProps, nextProps) => false,
-//   })
-// )(AppContainer);
-export default AppContainer;
+export default AppRoot;
