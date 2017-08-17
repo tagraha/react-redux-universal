@@ -43,7 +43,7 @@ exports[`<Home /> renders 1`] = `
       <NavLink
         activeClassName="is-active"
         className="nav-item is-tab"
-        to="/home"
+        to="/"
       >
         Home
       </NavLink>
