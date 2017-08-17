@@ -1,31 +1,25 @@
 import { combineReducers } from 'redux';
-import posts, * as FromPosts from './posts';
-import theme, * as FromTheme from './appState';
+
+import theme, * as FromThemeState from './themeState';
 
 // -----------------------------------------------------------------------------
 // REDUCER
 
-const rootReducer = combineReducers({
-  posts,
+const themeSkeleton = combineReducers({
   theme,
 });
 
 // -----------------------------------------------------------------------------
 // EXPORTED SELECTORS
-
-export function getPostById(state, id) {
-  return FromPosts.getById(state.posts, id);
-}
-
 export function getAllAppState(state) {
-  return FromTheme.getAllAppState(state.theme);
+  return FromThemeState.getAllAppState(state);
 }
 
 export function getSidebarState(state) {
-  return FromTheme.getSidebarState(state.theme);
+  return FromThemeState.getSidebarState(state);
 }
 
 // -----------------------------------------------------------------------------
 // REDUCER EXPORT
 
-export default rootReducer;
+export default themeSkeleton;
