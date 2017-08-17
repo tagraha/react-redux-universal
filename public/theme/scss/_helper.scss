@@ -3,6 +3,10 @@
   color: #fff !important;
 }
 
+.full-width {
+  width: 100% !important;
+}
+
 /* position helper */
 .fixed {
   position: fixed;
@@ -25,4 +29,9 @@
 /* margin helper */
 .margbot {
   margin-bottom: 1.5rem;
+}
+
+/* display helper */
+.disblock {
+  display: block;
 }
