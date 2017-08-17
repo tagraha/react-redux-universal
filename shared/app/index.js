@@ -17,9 +17,21 @@ import AsyncPostsRoute from './AsyncPostsRoute';
 import AsyncAboutRoute from './AsyncAboutRoute';
 
 import AnimatedSwitch from './AnimatedSwitch';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { withJob } from 'react-jobs';
+
+/* redux */
+import * as ThemeAction from './../actions/appState';
+import * as FromState from './../reducers';
+
+/* components */
+import Sidebar from './../components/Sidebar';
+import Overlay from './../components/Overlay';
 
 class AppContainer extends Component {
   render() {
+    const { theme } = this.props.allAppState;
     return (
       <div>
         <Helmet>
@@ -115,9 +127,13 @@ class AppContainer extends Component {
           /> */}
         </Helmet>
 
-        <div className="overlay out" id="overlay" />
+        {theme.sidebarIsOpen &&
+          <Overlay reveal={theme.sidebarIsOpen} closeFn={this.props.closeSidebar} />}
 
         <Header />
+
+        {theme.sidebarIsOpen && <Sidebar />}
+
         <div className="bt-wrapper">
 
           {/* <Route
@@ -146,4 +162,15 @@ class AppContainer extends Component {
   }
 }
 
-export default AppContainer;
+function mapStateToProps(state) {
+  return {
+    allAppState: FromState.getAllAppState(state),
+  };
+}
+
+const mapActionsToProps = {
+  openSidebar: ThemeAction.openSidebar,
+  closeSidebar: ThemeAction.closeSidebar,
+};
+
+export default compose(connect(mapStateToProps, mapActionsToProps))(AppContainer);
