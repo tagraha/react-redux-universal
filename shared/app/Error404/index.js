@@ -10,7 +10,7 @@ class Error404 extends Component {
   }
 
   render() {
-    return <div>Sorry, that page was not found.</div>;
+    return <div className="bt-wrapper">Sorry, that page was not found.</div>;
   }
 }
 

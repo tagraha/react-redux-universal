@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import Logo from './Logo';
 import Menu from './Menu';
 
-function Header() {
-  return <Menu />;
+class Header extends Component {
+  render() {
+    return <Menu sidebarTrigger={this.props.sidebarTrigger} />;
+  }
 }
 
 export default Header;
