@@ -13,7 +13,7 @@ import TransitionGroup from 'react-transition-group/TransitionGroup';
 import Error404 from './Error404';
 // import Header from './Header';
 
-// import AppContainer from './AppContainer';
+import Layout from './Layout';
 import AsyncHomeRoute from './AsyncHomeRoute';
 import AsyncPostsRoute from './AsyncPostsRoute';
 import AsyncAboutRoute from './AsyncAboutRoute';
@@ -129,7 +129,7 @@ class AppRoot extends Component {
             </TransitionGroup>
           )}
         /> */}
-
+        <Route component={Layout} />
         <Switch>
           <Route exact path="/" component={AsyncHomeRoute} />
           <Route path="/posts" component={AsyncPostsRoute} />
