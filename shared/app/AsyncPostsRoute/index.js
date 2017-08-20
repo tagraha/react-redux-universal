@@ -5,7 +5,7 @@ import AnimatedSwitch from '../AnimatedSwitch';
 import Post from './Post';
 
 const AsyncPostsRoute = () => (
-  <div>
+  <div className="columns bt-content">
     <ul>
       <li><Link to="/posts/1">Post 1</Link></li>
       <li><Link to="/posts/2">Post 2</Link></li>
