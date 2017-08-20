@@ -11,8 +11,21 @@ class Menu extends Component {
             <a className="nav-item" id="sidebaropener">
               <img src="http://bulma.io/images/bulma-logo.png" alt="logo" />
             </a>
-            <a className="nav-item is-tab is-hidden-mobile is-active">Home</a>
-            <a className="nav-item is-tab is-hidden-mobile">About</a>
+            <NavLink
+              exact
+              to="/"
+              className="nav-item is-tab is-hidden-mobile"
+              activeClassName="is-active"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className="nav-item is-tab is-hidden-mobile"
+              activeClassName="is-active"
+            >
+              About
+            </NavLink>
           </div>
           <span className="nav-toggle" onClick={sidebarTrigger}>
             <span />
@@ -20,13 +33,15 @@ class Menu extends Component {
             <span />
           </span>
           <div className="nav-right nav-menu">
-            <NavLink className="nav-item is-tab" to="/" activeClassName="is-active">
+            <NavLink exact className="nav-item is-tab" to="/" activeClassName="is-active">
               Home
             </NavLink>
             <NavLink className="nav-item is-tab" to="/posts" activeClassName="is-active">
               Posts
             </NavLink>
-            <NavLink className="nav-item is-tab" to="/about">About</NavLink>
+            <NavLink className="nav-item is-tab" to="/about" activeClassName="is-active">
+              About
+            </NavLink>
             <a className="nav-item is-tab is-hidden-tablet">About</a>
             <a className="nav-item is-tab">
               <figure className="image is-16x16" style={{ marginRight: '8px' }}>
