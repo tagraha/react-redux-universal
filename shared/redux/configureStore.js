@@ -1,12 +1,20 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import axios from 'axios';
 import reducer from '../reducers';
+
+const loggerOption = {
+  collapsed: true,
+};
+
+const logger = createLogger(loggerOption);
 
 function configureStore(initialState) {
   const enhancers = compose(
     // Middleware store enhancer.
     applyMiddleware(
+      logger, // remove on production
       // Initialising redux-thunk with extra arguments will pass the below
       // arguments to all the redux-thunk actions. Below we are passing a
       // preconfigured axios instance which can be used to fetch data with.
@@ -17,13 +25,13 @@ function configureStore(initialState) {
     // @see https://github.com/zalmoxisus/redux-devtools-extension
     // We only want this enhancer enabled for development and when in a browser
     // with the extension installed.
-    process.env.NODE_ENV === 'development'
-      && typeof window !== 'undefined'
-      && typeof window.devToolsExtension !== 'undefined'
-      // Call the brower extension function to create the enhancer.
-      ? window.devToolsExtension()
-      // Else we return a no-op function.
-      : f => f,
+    process.env.NODE_ENV === 'development' &&
+      typeof window !== 'undefined' &&
+      typeof window.devToolsExtension !== 'undefined'
+      ? // Call the brower extension function to create the enhancer.
+        window.devToolsExtension()
+      : // Else we return a no-op function.
+        f => f,
   );
 
   const store = initialState
